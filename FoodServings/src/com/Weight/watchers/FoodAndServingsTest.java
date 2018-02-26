@@ -21,10 +21,13 @@ public class FoodAndServingsTest {
 	
 	
 	public static void setup() {
-		System.setProperty("webdriver.chrome.driver", "C:/MyPrograms/Selenium/Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "./chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.get("C:/Users/govar/Documents/Work/Input.html");
+		String CURRENT_DIR = System.getProperty("user.dir");
+
+		//driver.get("C:/Users/govar/Documents/Work/Input.html");
+		driver.get("file:"+CURRENT_DIR+"./Input.html");
 	}
 
 	
