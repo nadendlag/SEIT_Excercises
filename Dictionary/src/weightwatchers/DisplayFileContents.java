@@ -12,6 +12,7 @@ public class DisplayFileContents {
 			System.exit(0);
 		}
 		String filePath = args[0];
+		//java -jar Dictionary.jar InputFruits.txt
 		File file = new File(filePath);
 
 		if (!doesFileExist(file)) {
@@ -36,7 +37,7 @@ public class DisplayFileContents {
 		Scanner level1;
 		Scanner level2;
 		level1 = new Scanner(st);
-		level1.useDelimiter("–");
+		level1.useDelimiter("-");
 		while (level1.hasNext()) {
 			parent = level1.next();
 			if (StringUtils.contains(parent, ",")) {
